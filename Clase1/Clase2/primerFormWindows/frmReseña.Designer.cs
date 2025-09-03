@@ -36,14 +36,14 @@
             btnGuardar = new Button();
             lblPuntuacion = new Label();
             cboPuntuacion = new ComboBox();
-            dataGridView1 = new DataGridView();
+            dgvResenia = new DataGridView();
             Fecha = new DataGridViewTextBoxColumn();
             Direccion = new DataGridViewTextBoxColumn();
             TipoLocal = new DataGridViewTextBoxColumn();
             Puntuacion = new DataGridViewTextBoxColumn();
-            button2 = new Button();
+            btnAlta = new Button();
             button3 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvResenia).BeginInit();
             SuspendLayout();
             // 
             // dtpFecha
@@ -95,6 +95,7 @@
             btnGuardar.TabIndex = 5;
             btnGuardar.Text = "Guardar reseña";
             btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // lblPuntuacion
             // 
@@ -108,19 +109,20 @@
             // cboPuntuacion
             // 
             cboPuntuacion.FormattingEnabled = true;
+            cboPuntuacion.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" });
             cboPuntuacion.Location = new Point(12, 188);
             cboPuntuacion.Name = "cboPuntuacion";
             cboPuntuacion.Size = new Size(287, 23);
             cboPuntuacion.TabIndex = 7;
             // 
-            // dataGridView1
+            // dgvResenia
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Fecha, Direccion, TipoLocal, Puntuacion });
-            dataGridView1.Location = new Point(12, 269);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(438, 112);
-            dataGridView1.TabIndex = 8;
+            dgvResenia.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvResenia.Columns.AddRange(new DataGridViewColumn[] { Fecha, Direccion, TipoLocal, Puntuacion });
+            dgvResenia.Location = new Point(12, 269);
+            dgvResenia.Name = "dgvResenia";
+            dgvResenia.Size = new Size(438, 112);
+            dgvResenia.TabIndex = 8;
             // 
             // Fecha
             // 
@@ -142,14 +144,15 @@
             Puntuacion.HeaderText = "Puntuacion";
             Puntuacion.Name = "Puntuacion";
             // 
-            // button2
+            // btnAlta
             // 
-            button2.Location = new Point(360, 100);
-            button2.Name = "button2";
-            button2.Size = new Size(90, 86);
-            button2.TabIndex = 9;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            btnAlta.Location = new Point(360, 100);
+            btnAlta.Name = "btnAlta";
+            btnAlta.Size = new Size(90, 86);
+            btnAlta.TabIndex = 9;
+            btnAlta.Text = "Alta";
+            btnAlta.UseVisualStyleBackColor = true;
+            btnAlta.Click += btnAlta_Click;
             // 
             // button3
             // 
@@ -157,8 +160,9 @@
             button3.Name = "button3";
             button3.Size = new Size(130, 33);
             button3.TabIndex = 10;
-            button3.Text = "button3";
+            button3.Text = "Recargar";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += btnRecargar_Click;
             // 
             // frmReseña
             // 
@@ -166,8 +170,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(462, 393);
             Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(dataGridView1);
+            Controls.Add(btnAlta);
+            Controls.Add(dgvResenia);
             Controls.Add(cboPuntuacion);
             Controls.Add(lblPuntuacion);
             Controls.Add(btnGuardar);
@@ -178,7 +182,7 @@
             Controls.Add(dtpFecha);
             Name = "frmReseña";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvResenia).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -193,8 +197,8 @@
         private Button btnGuardar;
         private Label lblPuntuacion;
         private ComboBox cboPuntuacion;
-        private DataGridView dataGridView1;
-        private Button button2;
+        private DataGridView dgvResenia;
+        private Button btnAlta;
         private DataGridViewTextBoxColumn Fecha;
         private DataGridViewTextBoxColumn Direccion;
         private DataGridViewTextBoxColumn TipoLocal;
