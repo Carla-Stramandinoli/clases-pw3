@@ -7,7 +7,6 @@ JuegoAdivinarNumero juegoAdivinarNumero = new JuegoAdivinarNumero();
 int _numRandom = juegoAdivinarNumero.GetNumeroRandom();
 int _numUsuario = 0;
 
-
 while (!juegoAdivinarNumero.JuegoTerminado(_numRandom, _numUsuario))
 {
     Console.Write("Ingrese un numero del 1 al 100: ");

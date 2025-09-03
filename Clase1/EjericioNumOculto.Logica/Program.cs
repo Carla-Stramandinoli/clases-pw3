@@ -28,7 +28,6 @@ public class JuegoAdivinarNumero
         if (diferencia <= 5 && diferencia >= 1) return "Muy caliente";
 
         return "Numero invalido";
-
     }
 
     public bool JuegoTerminado(int _numRandom, int _numUsuario)
